@@ -1,0 +1,238 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi there",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day",
+        "Hi",
+        "Good morning",
+        "Good afternoon",
+        "Good evening"
+      ],
+      "responses": [
+        "Hello, how can I assist you today?",
+        "Hi there, how can I help?"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye",
+        "Nice chatting to you, bye",
+        "Till next time"
+      ],
+      "responses": [
+        "See you!",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That's helpful",
+        "Awesome, thanks",
+        "Thanks for helping me"
+      ],
+      "responses": [
+        "Happy to help!",
+        "Any time!",
+        "My pleasure!",
+        "You’re welcome!"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "noanswer",
+      "patterns": [],
+      "responses": [
+        "Sorry, can't understand you",
+        "Please give me more info",
+        "Not sure I understand"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "options",
+      "patterns": [
+        "How you could help me?",
+        "What you can do?",
+        "What help you provide?",
+        "How you can be helpful?",
+        "What support is offered"
+      ],
+      "responses": [
+        "I can guide you through the NUS admission process or any questions relating to NUS which you might have."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "NusProg",
+      "patterns": [
+        "what are the programs that are available at NUS?",
+        "what are the prog available at NUS",
+        "nus offer",
+        "what does NUS offer",
+        "What does NUS offer",
+        "Programme at NUS"
+      ],
+      "responses": ["May I know which faculty are you referring to?"],
+      "context_set": "ComProg"
+    },
+    {
+      "tag": "Com_Prog",
+      "patterns": [
+        "nus computing",
+        "comr",
+        "NUS com",
+        "computing",
+        "i am referring to computing",
+        "i am referring to com",
+        "i am referring to Nus computing",
+        "i am referring to Nus com"
+      ],
+      "responses": [
+        "We offer outstanding degree programs across the field of computing, including Computer Science, Information Systems, Computer Engineering, Business Analytics and Information Security, as well as specializations in emerging areas of importance such as artificial intelligence, fintech, blockchain, analytics and security. For more information, please visit https://www.comp.nus.edu.sg/programmes/ ."
+      ],
+      "context_cond": "ComProg"
+    },
+    {
+      "tag": "ComProg",
+      "patterns": [
+        "what are the programs that are available at NUS Computing?",
+        "what are the prog available at NUS com",
+        "nus computing offer",
+        "what does NUS computing offer",
+        "What does NUS com offer",
+        "Programme at NUS com",
+        "Programme at NUS computing"
+      ],
+      "responses": [
+        "We offer outstanding degree programs across the field of computing, including Computer Science, Information Systems, Computer Engineering, Business Analytics and Information Security, as well as specializations in emerging areas of importance such as artificial intelligence, fintech, blockchain, analytics and security. For more information, please visit https://www.comp.nus.edu.sg/programmes/ ."
+      ]
+    },
+    {
+      "tag": "curriculum",
+      "patterns": [
+        "How is the curriculum for computing like?",
+        "NUS computing curriculum?",
+        "How is the curriculum for com like?",
+        "NUS com curriculum?",
+        "What is the curriculum structure in nus computing?",
+        "How is the curriculum structure in NUS computing?",
+        "What is the curriculum structure in nus comp?",
+        "How is the curriculum structure in NUS com?"
+      ],
+      "responses": [
+        "For a single degree, you will have to complete 160 modular credits (MC) and for a double degree, you will have to complete around 200 MC. The 160 MC is broken down into: 20 MC for University Level Requirements, 72 MC for Core Modules, 24 MC for Elective Modules,12 MC for Dissertation or Industry Internship Programme and the remaining 32MC is for Unrestricted Electives (UE). For poly-intake, 20MC is automatically awarded for UE. For more information, please visit https://www.comp.nus.edu.sg/programmes/ ."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "minor",
+      "patterns": [
+        "How many MC do I need to do a minor?",
+        "MC required for a minor?",
+        "Required number of MC for minor?",
+        "To take a minor, how many modular credits do I need?",
+        "How many modular credits do I need to do a minor?",
+        "modular credits required for a minor?",
+        "Required number of modular credits for minor?",
+        "To take a minor, how many modular credits do I need?"
+      ],
+      "responses": [
+        "At least 24 modular credit (MC) is required for a Minor programme, of which up to 8MCs can be counted also towards the Faculty/Major/Minor requirements. For more information, please visit https://www.comp.nus.edu.sg/programmes/ug/minor/ ."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "major",
+      "patterns": [
+        "How many MC do I need to do a major?",
+        "MC required for a major?",
+        "Required number of MC for major?",
+        "To take a major, how many modular credits do I need?",
+        "How many modular credits do I need to do a major?",
+        "modular credits required for a major?",
+        "Required number of modular credits for major?",
+        "To take a major, how many modular credits do I need?"
+      ],
+      "responses": [
+        "At least 48 modular credit (MC) is required for a Major programme, of which up to 16 MCs can be counted also towards the Faculty/Major/Minor requirements and at least 16 MCs must be at Level 3000.For more information, please visit https://www.comp.nus.edu.sg/programmes/ug/dmajor/ ."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "cap",
+      "patterns": [
+        "What is NUS cap like?",
+        "NUS cap?",
+        "How are the gpa in nus classified?",
+        "How are GPA graded?",
+        "What is NUS cap like?",
+        "NUS cap?",
+        "How are the cap in nus classified?",
+        "How are GPA graded?",
+        "How are the cap in nus categorized?",
+        "How are the cap in nus categorised?",
+        "How are the gpa in nus categorized?",
+        "How are the gpa in nus categorised?",
+        "How are the degree classified in NUS?",
+        "degree classification in NUS?"
+      ],
+      "responses": [
+        "The criteria for degree classification is as follows: Honours (Highest Distinction): CAP 4.50 and above Honours (Distinction): CAP 4.00 – 4.49 Honours (Merit): CAP 3.50 – 3.99 Honours: CAP 3.00 – 3.49 Pass: CAP 2.00 – 2.99 For more information, please visit http://www.nus.edu.sg/registrar/academic-information-policies/undergraduate-students/continuation-and-graduation-requirements ."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "min_MC",
+      "patterns": [
+        "How many MC do I need per sem?",
+        "How many MC do I need per semester?",
+        "How many modular credits do i need per sem?",
+        "How many modular credits do i need per semester?",
+        "What is the minimum MC I need to take per sem?",
+        "What is the min MC do i require per sem?",
+        "What is the minimum MC I need to take per semester?",
+        "What is the min MC do I require per semester?",
+        "How many MC do i have to take per sem?",
+        "How many MC do i have to take per semester?",
+        "What is the minimum number of MC do i have to take per semester?"
+      ],
+      "responses": [
+        "You will have to take a minimum of 18 Modular credits every semester. For more information, please visit http://www.nus.edu.sg/registrar/academic-information-policies/undergraduate-students/continuation-and-graduation-requirements ."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "S/U",
+      "patterns": [
+        "How does SU works?",
+        "What are the SU options?",
+        "How do i go about SUing?",
+        "How do i exercise my SU?",
+        "How does S/U works?",
+        "What are the S/U options?",
+        "How do i go about S/Uing?",
+        "How do i exercise my S/U?",
+        "What are my S/U options",
+        "What are my SU options"
+      ],
+      "responses": [
+        "You may exercise S/U option for up to 32 MCs or 20 MCs for Poly intake in the first 2 regular semsters, if not fully utilized, the S/U option can in exercise in subsequent semsters, for up to 12 MCs. For more information, please visit http://www.nus.edu.sg/registrar/academic-information-policies/undergraduate-students/continuation-and-graduation-requirements ."
+      ],
+      "context": [""]
+    }
+  ]
+}
